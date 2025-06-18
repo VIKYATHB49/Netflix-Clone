@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Netflix Login</title>
+    <meta name="description" content="This is a frontend only clone of Netflix - Watch Netflix movies & TV shows online or stream right to your smart TV, game console, PC, Mac, mobile, tablet and more.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="../CSS/Landing-pages.css">
+    <link rel="icon" href="../IMAGES/Logo.png" type="image/png">
+</head>
+
+<body>
+    <style>
+        body::before {
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 60%, rgba(0, 0, 0, 0.9) 100%), url('../IMAGES/Background.jpg');
+        }
+    </style>
+
+    <main style="padding: 0px 10px;">
+        <header class="d-flex space-between middle-align">
+            <a href="/">
+                <img src="../IMAGES/Netflix-Logo.png" height="50px" width="170px" alt="site logo main" style="margin: auto;">
+            </a>
+        </header>
+
+        <section id="login-form-section">
+            <div class="loginContainer d-flex direction-column">
+                <p>⚠ Do not enter your personal information in fake websites.</p>
+                <h2 class="formtitle">Sign In</h2>
+                
+                <form id="loginForm" class="d-flex direction-column" onsubmit="return handleLogin(event)">
+                    <input type="text" name="email" id="email" class="email" placeholder="Email or phone number" onchange="validateEmail()" required />
+                    <p id="errorEmail" style="display: none; color: red;">Please enter a valid email address or phone number.</p>
+
+                    <input type="password" name="password" id="password" placeholder="Password" onchange="validatePassword()" required />
+                    <p id="errorPassword" style="display: none; color: red;">Your password must contain between 4 and 60 characters.</p>
+
+                    <button type="submit" class="button submitButton" id="signInButton" disabled="disabled">
+                        Sign In
+                    </button>
+
+                    <div class="rememberMe">
+                        <input type="checkbox" name="rememberMe" id="rememberMe" class="rememberMe">
+                        <label for="rememberMe"><span class="login-remember-me-label-text">Remember me</span></label>
+                    </div>
+
+                    <p class="signUpText para">
+                        New to Netflix? <span class="signUp"><a href="Register.html">Sign up Now</a></span>
+                    </p>
+                    <p class="bottomMessage para">
+                        This page is protected by Google reCAPTCHA to ensure you're not a bot
+                    </p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const emailInput = document.getElementById('email');
+        const passwordInput = document.getElementById('password');
+        const signInButton = document.getElementById('signInButton');
+
+        let emailValid = false;
+        let passwordValid = false;
+
+        function validateEmail() {
+            const email = emailInput.value.trim();
+            const re = /\S+@\S+\.\S+/;
+            emailValid = re.test(email);
+
+            document.getElementById('errorEmail').style.display = emailValid ? "none" : "block";
+            toggleSubmitButton();
+        }
+
+        function validatePassword() {
+            const password = passwordInput.value;
+            passwordValid = password.length >= 4 && password.length <= 60;
+
+            document.getElementById('errorPassword').style.display = passwordValid ? "none" : "block";
+            toggleSubmitButton();
+        }
+
+        function toggleSubmitButton() {
+            signInButton.disabled = !(emailValid && passwordValid);
+        }
+
+        function handleLogin(event) {
+            event.preventDefault(); // prevent form submission
+            validateEmail();
+            validatePassword();
+
+            if (emailValid && passwordValid) {
+                window.location.href = "Home.html"; // redirect to home page
+            }
+
+            return false; // prevent default form submission
+        }
+    </script>
+</body>
+</html>

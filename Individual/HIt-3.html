@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HIT-3 Third Case</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../CSS/owl.carousel.css" />
+    <script src="../JS/jquery 3.5.0.js"></script>
+    <script src="../JS/owl.carousel.js"></script>
+    <script src="../JS/Script.js"></script>
+    <link rel="stylesheet" href="../CSS/global.css">
+    <link rel="stylesheet" href="../CSS/Home.css">
+    <link rel="icon" href="../IMAGES/Logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css"
+        integrity="sha256-t2kyTgkh+fZJYRET5l9Sjrrl4UDain5jxdbqe8ejO8A=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../CSS/single.css">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.2/plyr.css" />
+    <script src="https://cdn.plyr.io/3.6.2/plyr.polyfilled.js"></script>
+
+</head>
+
+<body>
+    <main id="mainContainer" class="p-b-40">
+
+        <header class="d-flex space-between flex-center flex-middle">
+            <div class="nav-links d-flex flex-center flex-middle">
+                <a href="#">
+                    <h2 class="logo logo-text red-color f-s-28 m-r-25">NETFLIX</h2>
+                    <h2 class="second-logo-text red-color f-s-28">N</h2>
+                </a>
+                <a href="../HTML/Home.html" class="nav-item home">Home</a>
+                <a href="../HTML/Tvshow.html" class="nav-item">TV Show</a>
+                <a href="../HTML/Movies.html" class="nav-item">Movies</a>
+                <a href="../HTML/Latest.html" class="nav-item latest">Latest</a>
+                <a href="../HTML/Mylist.html" class="nav-item">My List</a>
+            </div>
+            <div class="righticons d-flex flex-end flex-middle">
+                <a href="../HTML/Search.html"><img src="../IMAGES/Search.png" alt="search icon"></a>
+                    <div class="dropdown notification">
+                        <img src="../IMAGES/Notification.svg" alt="notificatio icon">
+                        <div class="dropdown-content">
+                            <a href="#" class="profile-item d-flex flex-middle">
+                                <img src="../IMAGES/Users/User1.png" alt="user profile icon" class="user-icon">
+                                <span>You have new notification from <span>User 123</span></span>
+                            </a>
+                            <a href="#" class="profile-item d-flex flex-middle">
+                                <img src="../IMAGES/Users/User1.png" alt="user profile icon" class="user-icon">
+                                <span>You have new notification from <span>User 123</span></span>
+                            </a>
+                            <a href="#" class="profile-item d-flex flex-middle">
+                                <img src="../IMAGES/Users/User2.jpg" alt="user profile icon" class="user-icon">
+                                <span>You have new notification from <span>User 123</span></span>
+                            </a>
+                            <a href="#" class="profile-item d-flex flex-middle">
+                                <img src="../IMAGES/Users/User4.jpg" alt="user profile icon" class="user-icon">
+                                <span>You have new notification from <span>User 123</span></span>
+                            </a>
+                        </div>
+                    </div>
+                <div class="dropdown">
+                    <img src="../IMAGES/Users/User1.png" alt="user profile icon" class="user-icon"> <span class="profile-arrow"></span>
+
+                    <div class="dropdown-content">
+                        <div class="profile-links">
+                            <a href="#" class="profile-item d-flex flex-middle">
+                                <img src="../IMAGES/Users/User1.png" alt="user profile icon" class="user-icon">
+                                <span>Sama Vikyath Reddy</span>
+                            </a>
+                            <a href="#" class="profile-item d-flex flex-middle">
+                                <img src="../IMAGES/Users/User2.jpg" alt="user profile icon" class="user-icon">
+                                 <span>Sai Charan</span>
+                            </a>
+                            <a href="#" class="profile-item d-flex flex-middle">
+                                <img src="../IMAGES/Users/User3.jpg" alt="user profile icon" class="user-icon">
+                              <span>Bobby</span>
+                            </a>
+                            <a href="#" class="profile-item d-flex flex-middle" style="margin-bottom: 13px;">
+                                <img src="../IMAGES/Users/User4.jpg" alt="user profile icon" class="user-icon">
+                                 <span>Sathwik</span>
+                            </a>
+                            <a href="#" class="profile-item last" >Manage Profiles</a>
+                        </div>
+                        <div class="line"></div>
+                        <div class="links d-flex direction-column">
+                            <a href="../HTML/Account.html">Account</a>
+                            <a href="#">Help Center</a>
+                            <a href="#">Sign Out of Netflix</a>
+                            <br>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </header>
+
+        <!-- hero section video-->
+        <div class="videocontainer">
+            <video controls crossorigin playsinline
+                poster="../IMAGES/Posters/HIT-3.jpg" id="player">
+                <!-- Video files -->
+                <source src="../IMAGES/Trailers/HIT 3.mp4" type="video/mp4">
+
+                <!-- Caption files -->
+                <track kind="captions" label="English" srclang="en"
+                    src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.en.vtt" default>
+            </video>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+               
+                const player = new Plyr('#player');
+                window.player = player;
+                function on(selector, type, callback) {
+                    document.querySelector(selector).addEventListener(type, callback, false);
+                }
+            });
+        </script>
+
+
+        <section class="movieinformation container">
+            <div class="movielogo">
+                <img src="../images/movies/murder mystery logo.webp" alt="">
+            </div>
+            <div class="movierelease">
+                <span class="year">
+                    2019
+                </span>
+                <span class="rating">
+                    PG-13
+                </span>
+                <span class="timeduration">
+                    3h 7m
+                </span>
+            </div>
+            <div class="description">
+                The Homicide Intervention Team (HIT) sends ruthless police officer Arjun Sarkaar to find a group of killers and stop their grisly murder spree.
+            </div>
+            <div class="castinformation">
+                <p><span class="name">Director:</span> Sailesh Kolanu</p>
+                <p><span class="name">Screenplay:</span> Sailesh Kolanu</p>
+                <p><span class="name">Producers:</span> Prashanti Tipirineni, Nani</p>
+                <p><span class="name">Cast:</span> Nani, Karthi, Adivi Sesh, Srinidhi Shetty, Komalee Prasad, Prateik Patil Babbar
+</p>
+            </div>
+            <div class="actions d-flex flex-start flex-middle">
+                <a href="#" class="link-item">
+                    <i class="fa fa-plus"></i></br>
+                    My List
+                </a>
+                <a href="#" class="link-item">
+                    <i class="fa fa-thumbs-up"></i></br>
+                    Like
+                </a>
+                <a href="#" class="link-item">
+                    <i class="fa fa-share"></i></br>
+                    Share
+                </a>
+                <a href="#" class="link-item">
+                    <i class="fa fa-download"></i></br>
+                    Download
+                </a>
+            </div>
+        </section>
+
+
+
+
+        <!--Hollywood Action movies-->
+        <section id="newtvshow" class="container p-t-40" style="padding-top: 120px;">
+                    <h4 class="romantic-heading">
+                        More Like This 
+                    </h4>
+                    <div class="romantic-container d-flex flex-start flex-middle flex-no-wrap owl-carousel">
+                        <a href="#">
+                            <img src="../IMAGES/Posters/Daaku.jpg" alt=""
+                                class="mylist-img p-r-10 p-t-10 image-size item"></a>
+                        <a href="#">
+                            <img src="../IMAGES/Posters/Hi-Nanna.jpg" alt=""
+                                class="mylist-img p-r-10 p-t-10 image-size item"></a>
+                        <a href="#">
+                            <img src="../IMAGES/Posters/Thandel.jpg" alt=""
+                                class="mylist-img p-r-10 p-t-10 image-size item"></a>
+                        <a href="#">
+                            <img src="../IMAGES/Posters/Devara.jpg" alt=""
+                                class="mylist-img p-r-10 p-t-10 image-size item"></a>
+                        <a href="#">
+                            <img src="../IMAGES/Posters/Saripodhaa-sanivaram.jpg" alt=""
+                                class="mylist-img p-r-10 p-t-10 image-size item"></a>
+
+                        <a href="#">
+                            <img src="../IMAGES/Posters/Meiyazhagan.jpg" alt=""
+                                class="mylist-img p-r-10 p-t-10 image-size item"></a>
+
+                    </div>
+                </section>
+        </div>
+
+        <footer class="mainfooter d-flex direction-column space-between" id=" footer">
+            <div class="container footer-container flex-start">
+                <div class="widgets d-flex space-between">
+                    <div class="first-widget">
+                        <ul>
+                            <li class="list-item">Audio and Subtitles</li>
+                            <li class="list-item">Media Center</li>
+                            <li class="list-item">Privacy</li>
+                            <li class="list-item">Contact us</li>
+                        </ul>
+                    </div>
+                    <div class="second-widget">
+                        <ul>
+                            <li class="list-item">Help Center</li>
+                            <li class="list-item">Cookie</li>
+                            <li class="list-item">Jobs</li>
+                        </ul>
+                    </div>
+                    <div class="third-widget">
+                        <ul>
+                            <li class="list-item">Audio Description</li>
+                            <li class="list-item">Investor Relations</li>
+                            <li class="list-item">Legal Notice</li>
+                        </ul>
+                    </div>
+                    <div class="forth-widget">
+                        <ul>
+                            <li class="list-item">Gift Card</li>
+                            <li class="list-item">Term Of Use</li>
+                            <li class="list-item">Corporate Information</li>
+                        </ul>
+                    </div>
+                </div>
+                <button class="button service">Service Code</button>
+                <p class="copyright">&copy; 2025 Netflix, Inc.</p>
+            </div>
+
+
+        </footer>
+        </div>
+
+
+    </main>
+
+    <div class="footer-navigation d-flex space-between">
+        <a href="../HTML/Home.html" class="nav-item active">
+            <i class="fa fa-home" aria-hidden="true"></i> </br>
+            <span>Home</span>
+        </a>
+        <a href="../HTML/Search.html" class="nav-item">
+            <i class="fa fa-search" aria-hidden="true"></i></br>
+            Search
+        </a>
+        <a href="../HTML/Latest.html" class="nav-item">
+            <i class="fa fa-film" aria-hidden="true"></i></br>
+            Latest
+        </a>
+        <a href="../HTML/Account.html" class="nav-item">
+            <i class="fa fa-user" aria-hidden="true"></i></br>
+            Account
+        </a>
+    </div>
+
+
+</body>
+
+</html>
